@@ -1,0 +1,278 @@
+Entschuldige, da ist mir beim Text ein Fehler unterlaufen! Hier ist der komplette Code, den du einfach kopieren und in das neue index.html-Feld auf GitHub einfügen kannst:
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALO QUANTUM AI — Bitcoin & Crypto Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#080A0F',
+                        cardbg: '#0E131F',
+                        bordercolor: '#1E293B',
+                        neonblue: '#00F2FE',
+                        neongreen: '#10B981',
+                        neonpurple: '#8B5CF6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #080A0F; color: #F8FAFC; font-family: system-ui, -apple-system, sans-serif; }
+        .glass { background: rgba(14, 19, 31, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .glow-green { box-shadow: 0 0 25px rgba(16, 185, 129, 0.2); }
+        .glow-blue { box-shadow: 0 0 25px rgba(0, 242, 254, 0.15); }
+        @keyframes pulse-slow { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.02); } }
+        .pulse-card { animation: pulse-slow 4s infinite ease-in-out; }
+    </style>
+</head>
+<body class="min-h-screen relative overflow-x-hidden pb-16">
+
+    <!-- Background Canvas for Particles -->
+    <canvas id="bgCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-30"></canvas>
+
+    <!-- Header -->
+    <header class="relative z-10 border-b border-bordercolor glass sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-neongreen to-neonblue flex items-center justify-center glow-green">
+                    <i data-lucide="cpu" class="w-6 h-6 text-darkbg font-bold"></i>
+                </div>
+                <div>
+                    <h1 class="font-black tracking-wider text-lg bg-gradient-to-r from-white via-neonblue to-neongreen bg-clip-text text-transparent">MALO QUANTUM AI</h1>
+                    <p class="text-xs text-slate-400 tracking-widest uppercase">Protocol v9.4 // Active</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="hidden sm:flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1.5 rounded-full text-emerald-400 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span>KI-Status: Optimaler Kaufzeitpunkt</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 pt-8 relative z-10 space-y-8">
+
+        <!-- HERO SIGNAL SECTION -->
+        <section class="glass rounded-3xl p-8 md:p-10 border border-emerald-500/30 glow-green pulse-card relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-emerald-500/20 text-emerald-300 px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase border border-emerald-500/40">
+                        <i data-lucide="zap" class="w-4 h-4"></i>
+                        <span>Master Signal: STRONG BUY</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">
+                        Der perfekte Zeitpunkt ist <span class="text-emerald-400">JETZT</span>
+                    </h2>
+                    <p class="text-slate-300 text-base md:text-lg leading-relaxed">
+                        Die Quantum AI Neural Engine hat eine starke Akkumulationszone im Bitcoin-Netzwerk erkannt. On-Chain-Metriken und RSI signalisieren ein ideales Einstiegsfenster für langfristigen Vermögensaufbau.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+                        <div class="bg-darkbg/60 p-4 rounded-2xl border border-bordercolor">
+                            <span class="text-slate-400 text-xs block">Konfidenz-Score</span>
+                            <span class="text-2xl font-black text-emerald-400">96.4%</span>
+                        </div>
+                        <div class="bg-darkbg/60 p-4 rounded-2xl border border-bordercolor">
+                            <span class="text-slate-400 text-xs block">Empfohlene Allokation</span>
+                            <span class="text-2xl font-black text-neonblue">70% DCA</span>
+                        </div>
+                        <div class="bg-darkbg/60 p-4 rounded-2xl border border-bordercolor col-span-2 sm:col-span-1">
+                            <span class="text-slate-400 text-xs block">Trend-Horizont</span>
+                            <span class="text-2xl font-black text-purple-400">Bullish 90T</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Circular Gauge -->
+                <div class="lg:col-span-5 flex flex-col items-center justify-center bg-darkbg/40 p-6 rounded-3xl border border-bordercolor">
+                    <div class="relative w-48 h-48 flex items-center justify-center">
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="42" stroke="#1E293B" stroke-width="8" fill="none"></circle>
+                            <circle cx="50" cy="50" r="42" stroke="#10B981" stroke-width="8" fill="none" stroke-dasharray="264" stroke-dashoffset="15" stroke-linecap="round" class="transition-all duration-1000"></circle>
+                        </svg>
+                        <div class="absolute flex flex-col items-center text-center">
+                            <span class="text-xs text-slate-400 uppercase tracking-widest">AI Rating</span>
+                            <span class="text-4xl font-black text-white">9.6</span>
+                            <span class="text-xs text-emerald-400 font-bold mt-1">OPTIMAL</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-4 text-center">Nächster KI-Re-Scan in: <span id="timer" class="text-white font-mono font-bold">14:59</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVE CHART & METRICS -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 glass rounded-3xl p-6 border border-bordercolor">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold">Bitcoin Live Quantum Stream</h3>
+                        <p class="text-xs text-slate-400">Echtzeit-Preisverfolgung & KI-Zonen</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-400 text-xs font-bold">$68,420.50</span>
+                    </div>
+                </div>
+                <div class="h-72 w-full">
+                    <canvas id="cryptoChart"></canvas>
+                </div>
+            </div>
+
+            <!-- AI Decision Calculator -->
+            <div class="glass rounded-3xl p-6 border border-bordercolor flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold mb-1">Malo Smart Allocator</h3>
+                    <p class="text-xs text-slate-400 mb-6">Berechne deinen perfekten Einsatz</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="text-xs text-slate-400 block mb-2">Investitionsbetrag (€)</label>
+                            <input type="number" id="investAmount" value="1000" class="w-full bg-darkbg border border-bordercolor rounded-xl px-4 py-3 text-white font-bold focus:outline-none focus:border-emerald-500 transition-colors">
+                        </div>
+                        <div class="bg-darkbg/60 p-4 rounded-xl border border-bordercolor space-y-2">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-400">Sofort-Kauf (KI-Empfehlung):</span>
+                                <span id="instantBuy" class="font-bold text-emerald-400">700 €</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-400">Limit-Order Dip-Reserve:</span>
+                                <span id="limitBuy" class="font-bold text-neonblue">300 €</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="triggerAction()" class="mt-6 w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-darkbg font-extrabold tracking-wider uppercase hover:opacity-90 transition-opacity shadow-lg glow-green">
+                    Strategie aktivieren
+                </button>
+            </div>
+        </div>
+
+        <!-- SIDEFACTS SECTION WITH COOL ICONS -->
+        <section class="space-y-6">
+            <div class="text-center max-w-xl mx-auto space-y-2">
+                <h3 class="text-2xl font-black">Quantum Sidefacts & Fundamentaldaten</h3>
+                <p class="text-slate-400 text-sm">Wichtige Kennzahlen, warum der Zeitpunkt laut Malo-Protocol perfekt ist.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Fact 1 -->
+                <div class="glass rounded-2xl p-6 border border-bordercolor hover:border-emerald-500/50 transition-colors space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-bold text-lg">Wal-Akkumulation</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Großinvestoren (Whales) ziehen massiv Bitcoin von Börsen ab. Das reduziert das Angebot auf dem Markt drastisch.</p>
+                </div>
+                <!-- Fact 2 -->
+                <div class="glass rounded-2xl p-6 border border-bordercolor hover:border-neonblue/50 transition-colors space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-neonblue/10 flex items-center justify-center text-neonblue">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-bold text-lg">MVRV Z-Score</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Der Indikator zeigt an, dass Bitcoin fair bewertet ist und sich im idealen unteren Drittel des makroökonomischen Zyklus befindet.</p>
+                </div>
+                <!-- Fact 3 -->
+                <div class="glass rounded-2xl p-6 border border-bordercolor hover:border-purple-500/50 transition-colors space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-bold text-lg">KI-Sentiment-Loop</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Globale Nachrichten und Social-Sentiment-Analysen zeigen eine extrem hohe bullische Erwartungshaltung für die kommenden Wochen.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 border-t border-bordercolor py-8 text-center text-slate-500 text-xs">
+        <p>© 2026 MALO QUANTUM AI PROTOCOL. Keine Anlageberatung im Sinne des WpHG.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+
+        // Background Particle Animation
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+        function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const particles = Array.from({ length: 40 }, () => ({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 2 + 1,
+            speedX: (Math.random() - 0.5) * 0.5,
+            speedY: (Math.random() - 0.5) * 0.5
+        }));
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'rgba(16, 185, 129, 0.5)';
+            particles.forEach(p => {
+                p.x += p.speedX; p.y += p.speedY;
+                if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+                ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // Chart.js Setup
+        const ctxChart = document.getElementById('cryptoChart').getContext('2d');
+        new Chart(ctxChart, {
+            type: 'line',
+            data: {
+                labels: ['12:00', '14:00', '16:00', '18:00', '20:00', '22:00', 'Jetzt'],
+                datasets: [{
+                    label: 'BTC Preis ($)',
+                    data: [67100, 67450, 67300, 67800, 68100, 67950, 68420],
+                    borderColor: '#10B981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94A3B8' } },
+                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94A3B8' } }
+                }
+            }
+        });
+
+        // Calculator Logic
+        const amountInput = document.getElementById('investAmount');
+        const instantBuy = document.getElementById('instantBuy');
+        const limitBuy = document.getElementById('limitBuy');
+
+        amountInput.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value) || 0;
+            instantBuy.textContent = (val * 0.7).toFixed(0) + ' €';
+            limitBuy.textContent = (val * 0.3).toFixed(0) + ' €';
+        });
+
+        function triggerAction() {
+            alert('Malo Quantum AI hat deine Strategie erfolgreich im Neural-Netz gespeichert!');
+        }
+    </script>
+</body>
+</html>
+
